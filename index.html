@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <main>
+        <!-- haburger for mobile -->
+        <header class="mobile-header">
+            <div class="logo2" onclick="toggleNav()">
+                <img src="images/Logo.png" alt="Full Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <img src="images/Vector (5).png" alt="">
+            </div>
+        </header>
+        <!-- side-nav starts here -->
+        <nav id="navbar">
+            <div class="logo" onclick="toggleNav()">
+                <img src="images/Logo.png" alt="Full Logo">
+            </div>
+            <navItem class="home-nav">
+                <img src="images/home.png">
+                <p>Home</p>
+            </navItem>
+            <navItem>
+                <img src="images/solar_calendar-linear.png">
+                <p>Events</p>
+            </navItem>
+            <navItem>
+                <img src="images/solar_user-speak-rounded-linear.png">
+                <p>Speakers</p>
+            </navItem>
+            <navItem>
+                <img src="images/solar_document-linear.png">
+                <p>Reports</p>
+            </navItem>
+            <navItem>
+                <img src="images/bell.png">
+                <div class="notification">
+                    <p>Notifications</p>
+                    <span>3</span>
+                </div>
+            </navItem>
+            <navItem>
+                <img src="images/double-chat-bubble.png">
+                <p href="#">Messages</p>
+            </navItem>
+            <navItem>
+                <img src="images/settings-2.png">
+                <p href="#">Settings</p>
+            </navItem>
+            <navItem>
+                <img src="images/double-chevron-left.png">
+                <p href="#">Collapse</p>
+            </navItem>
+            <navItem>
+                <img src="images/Base Switch.png">
+                <p href="#">Dark mode</p>
+            </navItem>
+            <navItem>
+                <img src="images/Avatar.png">
+                <div class="avatar-text">
+                    <p href="#">Ruth Devi</p>
+                    <span>rudra.devi@gmail.com</span>
+                </div>
+            </navItem>
+        </nav>
+
+        <!-- section-body -->
+        <section>
+            <!-- section header text -->
+            <header>
+                <h2>Welcome! here's your summary</h2>
+            </header>
+
+            <!-- section card -->
+            <div class="section-card">
+                <div class="box">
+                    <div class="text1">
+                        <h3>Total Events </h3>
+                        <img src="images/information.png">
+                    </div>
+                    <div class="text2">
+                        <h3>100,000</h3>
+                        <div class="second-text2">
+                            <img src="images/arrow-up-right.png">
+                            <span>+5.0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text1">
+                        <h3>Total Events </h3>
+                        <img src="images/information.png">
+                    </div>
+                    <div class="text2">
+                        <h3>25</h3>
+                        <div class="second-text2">
+                            <img src="images/arrow-down-right.png">
+                            <span style="color: #F43F5E;">-5.0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text1">
+                        <h3>Total Events </h3>
+                        <img src="images/information.png">
+                    </div>
+                    <div class="text2">
+                        <h3>300</h3>
+                        <div class="second-text2">
+                            <img src="images/arrow-up-right.png">
+                            <span>+5.0%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text1">
+                        <h3>Total Events </h3>
+                        <img src="images/information.png">
+                    </div>
+                    <div class="text2">
+                        <h3>$500,000</h3>
+                        <div class="second-text2">
+                            <img src="images/arrow-up-right.png">
+                            <span>+5.0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- event registration -->
+             <div class="registration-container">
+                <h3>Event Registration per month</h3>
+                <div class="registration">
+                    <div class="chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    
+                    <div class="carousel swiper">
+                        <div class="swiper-wrapper">
+                            <div class="carousel-slide swiper-slide">
+                                <img src="images/Slide.png" alt="Slide 1">
+                                <div class="text">
+                                    <h4>Latext News & Update</h4>
+                                    <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide swiper-slide">
+                                <img src="images/Slide (1).png" alt="Slide 2">
+                                <div class="text">
+                                    <h4>Latext News & Update</h4>
+                                    <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide swiper-slide">
+                                <img src="images/Slide (2).png" alt="Slide 3">
+                                <div class="text">
+                                    <h4>Latext News & Update</h4>
+                                    <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non. Pellentesque in ut tellus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swipe-pagination">
+                            <img src="images/Indicator.png" alt="">
+                            <img src="images/Indicator (1).png" alt="">
+                            <img src="images/Indicator (1).png" alt="">
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="images/Right Button.png" alt="">
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="images/Left Button.png" alt="">
+                        </div>
+                    </div>
+                 </div>
+             </div>
+
+             <!-- event histories -->
+             <div class="event-history">
+                <div class="event-title">
+                    <h4>Event History</h4>
+                </div>
+                <div class="history-header">
+                    <div class="history-header-left">
+                        <div class="search">
+                            <img src="images/Vector (2).png" class="search-icon">
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <select name="Date" id="date">
+                            <option value="Date">Date</option>
+                        </select>
+                        <select name="Date" id="date">
+                            <option value="Date">Status</option>
+                        </select>
+                        <select name="Date" id="date">
+                            <option value="Date">Name</option>
+                        </select>
+                        <label>Displaying 100 results</label>
+                    </div>
+                    <div class="history-header-right">
+                        <label for="text">Sort:</label>
+                        <select name="Date" id="date">
+                            <option value="Date">Most Recent</option>
+                        </select>
+                        <div class="dots">
+                            <img src="images/dots-vertical.png">
+                        </div>
+                        <div class="export">
+                            <img src="images/download.png">
+                            <p>Export</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Event Name</th>
+                                <th>Date</th>
+                                <th>Speaker</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-title="Cloud Innovation Summit" data-date="2024-10-15">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Cloud Innovation Summit</span>
+                                    </div>
+                                </td>
+                                <td>2024-10-15</td>
+                                <td>Jane Doe</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Blockchain Revolution Conference" data-date="2024-11-05">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (4).png" alt="Icon">
+                                        <span>Blockchain Revolution Conference</span>
+                                    </div>
+                                </td>
+                                <td>2024-11-05</td>
+                                <td>Dr. Peter Smith</td>
+                                <td class="status-progress">
+                                    <img src="images/Status Dot (1).png">
+                                    In Progress
+                                </td>
+                            </tr>
+                            <tr data-title="AI in Healthcare Symposium" data-date="2024-12-01">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>AI in Healthcare Symposium</span>
+                                    </div>
+                                </td>
+                                <td>2024-12-01</td>
+                                <td>Dr. Aisha Malik</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Future of Fintech Forum" data-date="2024-10-25">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Future of Fintech Forum</span>
+                                    </div>
+                                </td>
+                                <td>2024-10-25</td>
+                                <td>John Lee</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Data Analytics in Business" data-date="2024-11-12">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Data Analytics in Business</span>
+                                    </div>
+                                </td>
+                                <td>2024-11-12</td>
+                                <td>Rachel Moore</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Sustainable Energy Expo" data-date="2024-09-28">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Sustainable Energy Expo</span>
+                                    </div>
+                                </td>
+                                <td>2024-09-28</td>
+                                <td>Prof. Alan Green</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Web3 Interfaces Workshop" data-date="2024-10-10">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Web3 Interfaces Workshop</span>
+                                    </div>
+                                </td>
+                                <td>2024-10-10</td>
+                                <td>Kevin Adams</td>
+                                <td class="status-progress">
+                                    <img src="images/Status Dot (1).png">
+                                    In Progress
+                                </td>
+                            </tr>
+                            <tr data-title="Cybersecurity for Startups" data-date="2024-11-19">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Cybersecurity for Startups</span>
+                                    </div>
+                                </td>
+                                <td>2024-11-19</td>
+                                <td>Emily Zhang</td>
+                                <td class="status">
+                                    <img src="images/Status Dot.png">
+                                    Completed
+                                </td>
+                            </tr>
+                            <tr data-title="Smart Cities Forum" data-date="2024-10-18">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Smart Cities Forum</span>
+                                    </div>
+                                </td>
+                                <td>2024-10-18</td>
+                                <td>Dr. Maria Hernandez</td>
+                                <td class="status-progress">
+                                    <img src="images/Status Dot (1).png">
+                                    In Progress
+                                </td>
+                            </tr>
+                            <tr data-title="Tech Safari Mixer" data-date="2024-09-30">
+                                <td>
+                                    <div class="flex-container">
+                                        <img src="images/Vector (3).png" alt="Icon">
+                                        <span>Tech Safari Mixer</span>
+                                    </div>
+                                </td>
+                                <td>2024-09-30</td>
+                                <td>Guest Panel</td>
+                                <td class="status-progress">
+                                    <img src="images/Status Dot (1).png">
+                                    In Progress
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- modal -->
+                    <div id="eventModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-button">&times;</span>
+                            <h2 id="modalTitle">Event Details</h2>
+                            <span id="modalDateValue"></span>
+                            
+                            <!-- Additional content -->
+                            <div id="modalDescription">
+                                <p>Event Description</p>
+                            </div>
+
+
+
+                            <div class="modal-texts">
+                                <div class="modal-image">
+                                    <img src="images/Image.png">
+                                    <img src="images/Image (3).png" alt="">
+                                    <img src="images/Image (2).png" alt="">
+                                </div>
+                                <p>3 Guest Speakers: Speaker name A, Speaker name B, Speaker name C.
+                                    300 Attendees</p>
+                            </div>
+                            
+                            <!-- Buttons -->
+                            <div class="modal-buttons">
+                                <button id="editButton">Edit</button>
+                                <div class="modal-buttons-right">
+                                    <button id="deleteButton">Delete</button>
+                                    <button id="completed">Mark as completed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-history-footer">
+                        <div class="pagination">
+                            <button class="page-button-arrow" id="prev-button">❮</button>
+                            <button class="page-button" style="background-color: rgba(133, 118, 255, 1);">1</button>
+                            <button class="page-button">2</button>
+                            <button class="page-button">3</button>
+                            <button class="page-button-arrow" id="next-button">❯</button>
+                        </div>
+                        <div class="event-history-footer-right">
+                            <label>Show:</label>
+                            <select name="rows" id="rows">
+                                <option>10 rows</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <div class="footer-nav">
+                <navItem>
+                    <img src="images/Vector (6).png">
+                    <p style="color: rgba(133, 118, 255, 1);">Home</p>
+                </navItem>
+                <navItem>
+                    <img src="images/solar_calendar-linear.png">
+                    <p>Events</p>
+                </navItem>
+                <navItem>
+                    <img src="images/solar_user-speak-rounded-linear.png">
+                    <p>Speakers</p>
+                </navItem>
+                <navItem>
+                    <img src="images/solar_document-linear.png">
+                    <p>Reports</p>
+                </navItem>
+             </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
