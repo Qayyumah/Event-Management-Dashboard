@@ -5,15 +5,16 @@ function toggleNav() {
     navbar.classList.toggle('collapsed');
     section.classList.toggle('collapsed');
 }
-
+//hamburger
 hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
+
 // slider effect
 const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
     },
     pagination: {
