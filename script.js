@@ -5,10 +5,23 @@ function toggleNav() {
     navbar.classList.toggle('collapsed');
     section.classList.toggle('collapsed');
 }
+
 //hamburger
+const hamburger = document.getElementById('hamburger');
+const navbar = document.getElementById('navbar');
+const hamburgerIcon = document.querySelector('#hamburger img');
+
 hamburger.addEventListener('click', () => {
     navbar.classList.toggle('active');
+
+    // Change the icon based on the navbar's state
+    if (navbar.classList.contains('active')) {
+        hamburgerIcon.src = 'images/icon Button.png'; 
+    } else {
+        hamburgerIcon.src = 'images/Vector (5).png';
+    }
 });
+
 
 // slider effect
 const swiper = new Swiper('.swiper', {

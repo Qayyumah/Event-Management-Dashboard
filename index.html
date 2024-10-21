@@ -260,6 +260,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="drop">
+                                    <p>Speaker's name</p>
+                                    <span>2024-11-05</span> 
+                                </td>
                             </tr>
                             <tr data-title="AI in Healthcare Symposium" data-date="2024-12-01">
                                 <td>
@@ -378,34 +382,35 @@
 
                     <!-- modal -->
                     <div id="eventModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close-button">&times;</span>
-                            <h2 id="modalTitle">Event Details</h2>
-                            <span id="modalDateValue"></span>
-                            
-                            <!-- Additional content -->
-                            <div id="modalDescription">
-                                <p>Event Description</p>
-                            </div>
+                        
+                            <div class="modal-content">
+                                <div class="top-content-modal">
+                                    <span class="close-button">&times;</span>
+                                    <h2 id="modalTitle">Event Details</h2>
+                                    <span id="modalDateValue"></span>
+                                    
+                                    <div id="modalDescription">
+                                        <p>Event Description</p>
+                                    </div>
 
-
-
-                            <div class="modal-texts">
-                                <div class="modal-image">
-                                    <img src="images/Image.png">
-                                    <img src="images/Image (3).png" alt="">
-                                    <img src="images/Image (2).png" alt="">
+                                    <div class="modal-texts">
+                                        <div class="modal-image">
+                                            <img src="images/Image.png">
+                                            <img src="images/Image (3).png" alt="">
+                                            <img src="images/Image (2).png" alt="">
+                                        </div>
+                                        <p>3 Guest Speakers: Speaker name A, Speaker name B, Speaker name C.
+                                            300 Attendees</p>
+                                    </div>
                                 </div>
-                                <p>3 Guest Speakers: Speaker name A, Speaker name B, Speaker name C.
-                                    300 Attendees</p>
-                            </div>
-                            
-                            <!-- Buttons -->
-                            <div class="modal-buttons">
-                                <button id="editButton">Edit</button>
-                                <div class="modal-buttons-right">
-                                    <button id="deleteButton">Delete</button>
-                                    <button id="completed">Mark as completed</button>
+    
+                            <div class="modal-footer">
+                                <div class="modal-buttons">
+                                    <button id="editButton">Edit</button>
+                                    <div class="modal-buttons-right">
+                                        <button id="deleteButton">Delete</button>
+                                        <button id="completed">Mark as completed</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -414,7 +419,7 @@
                     <div class="event-history-footer">
                         <div class="pagination">
                             <button class="page-button-arrow" id="prev-button">❮</button>
-                            <button class="page-button" style="background-color: rgba(133, 118, 255, 1);">1</button>
+                            <button class="page-button" style="background-color: rgba(133, 118, 255, 1); color: #fff;">1</button>
                             <button class="page-button">2</button>
                             <button class="page-button">3</button>
                             <button class="page-button-arrow" id="next-button">❯</button>
@@ -431,7 +436,7 @@
              <div class="footer-nav">
                 <navItem>
                     <img src="images/Vector (6).png">
-                    <p>Home</p>
+                    <p style="color: rgba(133, 118, 255, 1);">Home</p>
                 </navItem>
                 <navItem>
                     <img src="images/solar_calendar-linear.png">
@@ -444,6 +449,10 @@
                 <navItem>
                     <img src="images/solar_document-linear.png">
                     <p>Reports</p>
+                </navItem>
+                <navItem>
+                    <img src="images/Vector (7).png">
+                    <p>Profile</p>
                 </navItem>
              </div>
         </section>
